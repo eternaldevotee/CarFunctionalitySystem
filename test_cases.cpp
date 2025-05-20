@@ -23,7 +23,7 @@ void ShiftGearSafety() {
     Car car;
     car.shiftGear(GearState::NEUTRAL);
     assert(car.getGearState() == GearState::NEUTRAL);
-    std::cout << "ShiftGearSafety passed.\n";
+    cout << "ShiftGearSafety passed.\n";
 }
 
 void DestinationAndArrival() {
@@ -34,17 +34,17 @@ void DestinationAndArrival() {
     car.accelerate(200);
     car.drive(1); 
     assert(car.hasArrived());
-    cout << "DestinationAndArrival passed"<<endl;
+    cout << "Destination And Arrival passed"<<endl;
 }
 
-void testDrivePartial() {
+void DrivePartial() {
     Car car;
     car.setDestination({1.0, 1.0});
     car.shiftGear(GearState::DRIVE);
     car.accelerate(10);
     car.drive(0.1);
     assert(!car.hasArrived());
-    scout << "DrivePartial passed"<<endl;
+    cout << "Drive Partial passed"<<endl;
 }
 
 int main() {
